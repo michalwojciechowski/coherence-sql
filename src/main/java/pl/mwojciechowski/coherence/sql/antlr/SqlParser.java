@@ -9,6 +9,8 @@ import org.antlr.v4.runtime.TokenStream;
 import static java.lang.System.currentTimeMillis;
 
 /**
+ * Main access point for parsing SQL query & transorming it into something more object oriented representation.
+ *
  * @author Michal Wojciechowski
  */
 @Log4j2

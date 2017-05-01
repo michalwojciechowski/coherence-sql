@@ -5,7 +5,11 @@ import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
 
 /**
+ * Allows to override default ANTLR behaviour and inform the user about the enountered errors in the actually parsed
+ * SQL query.
+ *
  * @author Michal Wojciechowski
+ * @see SqlParser#parse(String)
  */
 public class RaiseExceptionErrorListener extends BaseErrorListener {
 
