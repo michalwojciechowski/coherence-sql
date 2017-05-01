@@ -1,6 +1,6 @@
 # Coherence-sql
 Introduces basic support for SQL queries into Oracle Coherence data grid. Offers much more greater features than CoQL 
-(Coherence Query Language) and remote Java 8 Stream API combined in once.
+(Coherence Query Language) and remote Java 8 Stream API combined in one.
 
 # Key features
 1. Supports joins betwen key associated caches, e.g. :
