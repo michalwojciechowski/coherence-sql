@@ -11,7 +11,7 @@ select * from employee left join sallary on sallary.key = employee.key
 
 # Comparision with Presto
 
-# Comparision with competetive data grids
+# Comparision with competitive data grids
 
 # First steps
 
