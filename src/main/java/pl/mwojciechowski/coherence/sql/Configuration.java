@@ -17,7 +17,7 @@ public class Configuration {
 
     public ValueExtractorFactory defaultExtractorFactory() {
         return new RootPropertiesExtractorFactory(
-                new OptimalExtractorFactory(
+                new OptimisticExtractorFactory(
                         new ReflectionExtractorFactory(),
                         new PofExtractorFactory())
         );

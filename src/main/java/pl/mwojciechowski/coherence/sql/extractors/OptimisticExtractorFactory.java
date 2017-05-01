@@ -7,12 +7,12 @@ import java.util.List;
 /**
  * @author Michal Wojciechowski
  */
-public class OptimalExtractorFactory implements ValueExtractorFactory {
+public class OptimisticExtractorFactory implements ValueExtractorFactory {
 
     private ReflectionExtractorFactory reflectionExtractorFactory;
     private PofExtractorFactory pofExtractorFactory;
 
-    public OptimalExtractorFactory(ReflectionExtractorFactory reflectionExtractorFactory, PofExtractorFactory pofExtractorFactory) {
+    public OptimisticExtractorFactory(ReflectionExtractorFactory reflectionExtractorFactory, PofExtractorFactory pofExtractorFactory) {
         this.reflectionExtractorFactory = reflectionExtractorFactory;
         this.pofExtractorFactory = pofExtractorFactory;
     }
