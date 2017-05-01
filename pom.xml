@@ -60,9 +60,26 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.oracle.coherence</groupId>
+            <artifactId>coherence</artifactId>
+            <version>12.2.1</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4</artifactId>
             <version>4.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
