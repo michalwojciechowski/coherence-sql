@@ -1,11 +1,15 @@
 package pl.mwojciechowski.coherence.sql;
 
 import com.google.common.reflect.TypeToken;
+import com.tangosol.io.pof.annotation.Portable;
+import com.tangosol.io.pof.annotation.PortableProperty;
 import com.tangosol.net.CacheFactory;
 import com.tangosol.net.NamedCache;
 import com.tangosol.net.cache.TypeAssertion;
 import com.tangosol.util.Filter;
 import org.apache.commons.lang3.Validate;
+import pl.mwojciechowski.coherence.sql.remote.NamedCacheRepositoryFactory;
+import pl.mwojciechowski.coherence.sql.remote.RepositoryFactory;
 
 import java.util.Map;
 import java.util.Set;
@@ -13,12 +17,24 @@ import java.util.Set;
 /**
  * @author Michal Wojciechowski
  */
+@Portable
 public class NamedCacheRepository<Key, Value> implements Repository<Key, Value> {
 
+    @PortableProperty(value = 0)
     private String cacheName;
-    private NamedCache<Key, Value> cache;
+
+    @PortableProperty(value = 1, codec = ClassCodec.class)
     private Class<Key> keyClass;
+
+    @PortableProperty(value = 2, codec = ClassCodec.class)
     private Class<Value> valueClass;
+
+    private transient NamedCache<Key, Value> cache;
+
+    @PofConstructor
+    public NamedCacheRepository() {
+        // Do nothing
+    }
 
     /**
      * Constructor available only for classes directly extending {@link NamedCacheRepository}.
@@ -65,6 +81,11 @@ public class NamedCacheRepository<Key, Value> implements Repository<Key, Value> 
     @Override
     public Set<Map.Entry<Key, Value>> entrySet(Filter filter) {
         return cache().entrySet(filter);
+    }
+
+    @Override
+    public RepositoryFactory<Key, Value> provideFactory() {
+        return new NamedCacheRepositoryFactory<>(this);
     }
 
     private NamedCache<Key, Value> cache() {

@@ -1,9 +1,9 @@
 package pl.mwojciechowski.coherence.sql;
 
-import com.tangosol.util.function.Remote;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import pl.mwojciechowski.coherence.sql.extractors.*;
+import pl.mwojciechowski.coherence.sql.remote.BeanFactory;
 
 /**
  * @author Michal Wojciechowski
@@ -12,10 +12,10 @@ import pl.mwojciechowski.coherence.sql.extractors.*;
 @AllArgsConstructor
 public class Configuration {
 
-    private Remote.Function<String, Object> beanFactory;
+    private BeanFactory beanFactory;
     private ValueExtractorFactory valueExtractorFactory;
 
-    public Configuration(Remote.Function<String, Object> beanFactory) {
+    public Configuration(BeanFactory beanFactory) {
         this(beanFactory, defaultExtractorFactory());
     }
 
