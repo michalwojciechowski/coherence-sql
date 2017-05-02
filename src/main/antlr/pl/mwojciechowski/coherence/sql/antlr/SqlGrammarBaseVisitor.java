@@ -392,7 +392,7 @@ public class SqlGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
      * {@link #visitChildren} on {@code ctx}.</p>
      */
     @Override
-    public T visitTableNameWith_hint(SqlGrammarParser.TableNameWith_hintContext ctx) {
+    public T visitTableNameWithHint(SqlGrammarParser.TableNameWithHintContext ctx) {
         return visitChildren(ctx);
     }
 

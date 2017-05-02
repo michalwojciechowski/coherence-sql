@@ -3,6 +3,7 @@ package pl.mwojciechowski.coherence.sql.antlr;
 import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
+import pl.mwojciechowski.coherence.sql.InvalidQueryException;
 
 /**
  * Allows to override default ANTLR behaviour and inform the user about the enountered errors in the actually parsed

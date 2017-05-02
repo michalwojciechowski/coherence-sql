@@ -176,7 +176,11 @@ selectListElem
     ;
 
 tableSources
-    : tableSource (',' tableSource)*
+    : initialTableSource (',' tableSource)*
+    ;
+
+initialTableSource
+    : tableSourceItem
     ;
 
 // https://msdn.microsoft.com/en-us/library/ms177634.aspx
@@ -190,7 +194,7 @@ tableSourceItemJoined
     ;
 
 tableSourceItem
-    : tableNameWith_hint        asTableAlias?
+    : tableNameWithHint        asTableAlias?
     | derivedTable              (asTableAlias columnAliasList?)?
     | changeTable                asTableAlias
     | functionCall               asTableAlias?
@@ -206,14 +210,14 @@ changeTable
 joinPart
     // https://msdn.microsoft.com/en-us/library/ms173815(v=sql.120).aspx
     : (INNER? |
-       joinType=(LEFT | RIGHT | FULL) OUTER?) (join_hint=(LOOP | HASH | MERGE | REMOTE))?
+       joinType=(LEFT | RIGHT | FULL) OUTER?) (joinHint=(LOOP | HASH | MERGE | REMOTE))?
        JOIN tableSource ON searchCondition
     | CROSS JOIN tableSource
     | CROSS APPLY tableSource
     | OUTER APPLY tableSource
     ;
 
-tableNameWith_hint
+tableNameWithHint
     : tableName?
     ;
 

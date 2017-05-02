@@ -5,6 +5,7 @@ import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.TokenStream;
+import pl.mwojciechowski.coherence.sql.InvalidQueryException;
 
 import static java.lang.System.currentTimeMillis;
 

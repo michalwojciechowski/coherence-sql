@@ -2,6 +2,7 @@ package pl.mwojciechowski.coherence.sql.antlr;
 
 import org.assertj.core.api.ThrowableAssert;
 import org.testng.annotations.Test;
+import pl.mwojciechowski.coherence.sql.InvalidQueryException;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 

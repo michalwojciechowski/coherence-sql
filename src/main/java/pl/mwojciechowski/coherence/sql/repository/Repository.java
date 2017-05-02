@@ -14,6 +14,8 @@ public interface Repository<Key, Value> {
 
     Class<Value> getValueClass();
 
+    String getDetaultAlias();
+
     Set<Key> keySet(Filter filter);
 
     Set<Map.Entry<Key, Value>> entrySet(Filter filter);

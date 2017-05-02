@@ -49,7 +49,7 @@ public class NamedCacheRepository<Key, Value> implements Repository<Key, Value> 
     }
 
     public NamedCacheRepository(String cacheName, Class<Key> keyClass, Class<Value> valueClass) {
-        internalConstructor(cache.getCacheName(), keyClass, valueClass);
+        internalConstructor(cacheName, keyClass, valueClass);
     }
 
     public NamedCacheRepository(NamedCache<Key, Value> cache, Class<Key> keyClass, Class<Value> valueClass) {
@@ -74,6 +74,11 @@ public class NamedCacheRepository<Key, Value> implements Repository<Key, Value> 
     }
 
     @Override
+    public String getDetaultAlias() {
+        return cacheName;
+    }
+
+    @Override
     public Set<Key> keySet(Filter filter) {
         return cache().keySet(filter);
     }
@@ -93,5 +98,14 @@ public class NamedCacheRepository<Key, Value> implements Repository<Key, Value> 
             CacheFactory.getTypedCache(cacheName, TypeAssertion.withTypes(keyClass, valueClass));
         }
         return cache;
+    }
+
+    @Override
+    public String toString() {
+        return "NamedCacheRepository{" +
+                "cacheName='" + cacheName + '\'' +
+                ", keyClass=" + keyClass +
+                ", valueClass=" + valueClass +
+                '}';
     }
 }

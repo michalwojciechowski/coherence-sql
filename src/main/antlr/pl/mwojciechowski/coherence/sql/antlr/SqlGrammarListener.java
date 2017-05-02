@@ -500,18 +500,18 @@ public interface SqlGrammarListener extends ParseTreeListener {
     void exitJoinPart(SqlGrammarParser.JoinPartContext ctx);
 
     /**
-     * Enter a parse tree produced by {@link SqlGrammarParser#tableNameWith_hint}.
+     * Enter a parse tree produced by {@link SqlGrammarParser#tableNameWithHint}.
      *
      * @param ctx the parse tree
      */
-    void enterTableNameWith_hint(SqlGrammarParser.TableNameWith_hintContext ctx);
+    void enterTableNameWithHint(SqlGrammarParser.TableNameWithHintContext ctx);
 
     /**
-     * Exit a parse tree produced by {@link SqlGrammarParser#tableNameWith_hint}.
+     * Exit a parse tree produced by {@link SqlGrammarParser#tableNameWithHint}.
      *
      * @param ctx the parse tree
      */
-    void exitTableNameWith_hint(SqlGrammarParser.TableNameWith_hintContext ctx);
+    void exitTableNameWithHint(SqlGrammarParser.TableNameWithHintContext ctx);
 
     /**
      * Enter a parse tree produced by {@link SqlGrammarParser#derivedTable}.

@@ -7,7 +7,7 @@ import com.tangosol.util.extractor.ChainedExtractor;
 import com.tangosol.util.extractor.ReflectionExtractor;
 import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.commons.lang3.text.WordUtils;
-import pl.mwojciechowski.coherence.sql.antlr.InvalidQueryException;
+import pl.mwojciechowski.coherence.sql.InvalidQueryException;
 
 import java.lang.reflect.Method;
 import java.util.List;

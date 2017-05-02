@@ -1,4 +1,6 @@
-package pl.mwojciechowski.coherence.sql.antlr;
+package pl.mwojciechowski.coherence.sql;
+
+import pl.mwojciechowski.coherence.sql.antlr.SqlParser;
 
 /**
  * Indicates that given SQL query is invalid or incomplete.

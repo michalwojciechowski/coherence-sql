@@ -7,7 +7,7 @@ import com.tangosol.io.pof.reflect.SimplePofPath;
 import com.tangosol.util.ValueExtractor;
 import com.tangosol.util.extractor.AbstractExtractor;
 import com.tangosol.util.extractor.PofExtractor;
-import pl.mwojciechowski.coherence.sql.antlr.InvalidQueryException;
+import pl.mwojciechowski.coherence.sql.InvalidQueryException;
 
 import java.lang.reflect.Field;
 import java.util.List;
