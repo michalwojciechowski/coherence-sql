@@ -20,7 +20,11 @@ public class QueryFactory {
     }
 
     public Result<Tuple> execute(String rawQuery) {
+        Query query = from(rawQuery);
+        return null;
+    }
 
+    public Query from(String rawQuery) {
         log.trace("About to parse sql query: [{}]", rawQuery);
         SqlParser sqlParser = configuration.getSqlParser();
         SqlGrammarParser.SelectStatementContext statement = sqlParser.parse(rawQuery);
@@ -34,6 +38,7 @@ public class QueryFactory {
         Query.QueryBuilder queryBuilder = visitor.getQueryBuilder();
         Query query = queryBuilder.build();
 
-        return null;
+        log.trace("Successfully created query: [{}]", query);
+        return query;
     }
 }
