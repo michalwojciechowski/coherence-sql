@@ -672,33 +672,6 @@ public class SqlGrammarParser extends Parser {
         }
     }
 
-    public static class Column_refExpressionContext extends ExpressionContext {
-        public FullColumnNameContext fullColumnName() {
-            return getRuleContext(FullColumnNameContext.class, 0);
-        }
-
-        public Column_refExpressionContext(ExpressionContext ctx) {
-            copyFrom(ctx);
-        }
-
-        @Override
-        public void enterRule(ParseTreeListener listener) {
-            if (listener instanceof SqlGrammarListener) ((SqlGrammarListener) listener).enterColumn_refExpression(this);
-        }
-
-        @Override
-        public void exitRule(ParseTreeListener listener) {
-            if (listener instanceof SqlGrammarListener) ((SqlGrammarListener) listener).exitColumn_refExpression(this);
-        }
-
-        @Override
-        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-            if (visitor instanceof SqlGrammarVisitor)
-                return ((SqlGrammarVisitor<? extends T>) visitor).visitColumn_refExpression(this);
-            else return visitor.visitChildren(this);
-        }
-    }
-
     public static class CaseExpressionContext extends ExpressionContext {
         public ExpressionContext caseExpr;
         public ExpressionContext elseExpr;
@@ -798,6 +771,33 @@ public class SqlGrammarParser extends Parser {
         public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
             if (visitor instanceof SqlGrammarVisitor)
                 return ((SqlGrammarVisitor<? extends T>) visitor).visitFunctionCallExpression(this);
+            else return visitor.visitChildren(this);
+        }
+    }
+
+    public static class ColumnRefExpressionContext extends ExpressionContext {
+        public FullColumnNameContext fullColumnName() {
+            return getRuleContext(FullColumnNameContext.class, 0);
+        }
+
+        public ColumnRefExpressionContext(ExpressionContext ctx) {
+            copyFrom(ctx);
+        }
+
+        @Override
+        public void enterRule(ParseTreeListener listener) {
+            if (listener instanceof SqlGrammarListener) ((SqlGrammarListener) listener).enterColumnRefExpression(this);
+        }
+
+        @Override
+        public void exitRule(ParseTreeListener listener) {
+            if (listener instanceof SqlGrammarListener) ((SqlGrammarListener) listener).exitColumnRefExpression(this);
+        }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof SqlGrammarVisitor)
+                return ((SqlGrammarVisitor<? extends T>) visitor).visitColumnRefExpression(this);
             else return visitor.visitChildren(this);
         }
     }
@@ -1030,7 +1030,7 @@ public class SqlGrammarParser extends Parser {
                     }
                     break;
                     case 8: {
-                        _localctx = new Column_refExpressionContext(_localctx);
+                        _localctx = new ColumnRefExpressionContext(_localctx);
                         _ctx = _localctx;
                         _prevctx = _localctx;
                         setState(157);
@@ -2834,9 +2834,9 @@ public class SqlGrammarParser extends Parser {
     }
 
     public static class OptionContext extends ParserRuleContext {
-        public Token number_rows;
+        public Token numberRows;
         public Token numberOfProcessors;
-        public Token number_recursion;
+        public Token numberRecursion;
 
         public TerminalNode FAST() {
             return getToken(SqlGrammarParser.FAST, 0);
@@ -2995,7 +2995,7 @@ public class SqlGrammarParser extends Parser {
                     setState(382);
                     match(FAST);
                     setState(383);
-                    ((OptionContext) _localctx).number_rows = match(DECIMAL);
+                    ((OptionContext) _localctx).numberRows = match(DECIMAL);
                 }
                 break;
                 case 2:
@@ -3104,7 +3104,7 @@ public class SqlGrammarParser extends Parser {
                     setState(401);
                     match(MAXRECURSION);
                     setState(402);
-                    ((OptionContext) _localctx).number_recursion = match(DECIMAL);
+                    ((OptionContext) _localctx).numberRecursion = match(DECIMAL);
                 }
                 break;
                 case 12:
@@ -7960,5 +7960,5 @@ public class SqlGrammarParser extends Parser {
         for (int i = 0; i < _ATN.getNumberOfDecisions(); i++) {
             _decisionToDFA[i] = new DFA(_ATN.getDecisionState(i), i);
         }
-    }
+	}
 }

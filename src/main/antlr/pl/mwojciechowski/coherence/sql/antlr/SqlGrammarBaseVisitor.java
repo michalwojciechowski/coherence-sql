@@ -1,6 +1,5 @@
 // Generated from C:/Development/coherence-sql/src/main/resources\SqlGrammar.g4 by ANTLR 4.7
 package pl.mwojciechowski.coherence.sql.antlr;
-
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -9,7 +8,7 @@ import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
  * of the available methods.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
- *            operations with no return type.
+ * operations with no return type.
  */
 public class SqlGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements SqlGrammarVisitor<T> {
     /**
@@ -85,17 +84,6 @@ public class SqlGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
      * {@link #visitChildren} on {@code ctx}.</p>
      */
     @Override
-    public T visitColumn_refExpression(SqlGrammarParser.Column_refExpressionContext ctx) {
-        return visitChildren(ctx);
-    }
-
-    /**
-     * {@inheritDoc}
-     * <p>
-     * <p>The default implementation returns the result of calling
-     * {@link #visitChildren} on {@code ctx}.</p>
-     */
-    @Override
     public T visitCaseExpression(SqlGrammarParser.CaseExpressionContext ctx) {
         return visitChildren(ctx);
     }
@@ -108,6 +96,17 @@ public class SqlGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
      */
     @Override
     public T visitFunctionCallExpression(SqlGrammarParser.FunctionCallExpressionContext ctx) {
+        return visitChildren(ctx);
+    }
+
+    /**
+     * {@inheritDoc}
+     * <p>
+     * <p>The default implementation returns the result of calling
+     * {@link #visitChildren} on {@code ctx}.</p>
+     */
+    @Override
+    public T visitColumnRefExpression(SqlGrammarParser.ColumnRefExpressionContext ctx) {
         return visitChildren(ctx);
     }
 

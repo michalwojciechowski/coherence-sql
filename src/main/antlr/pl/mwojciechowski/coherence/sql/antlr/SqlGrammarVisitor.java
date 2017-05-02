@@ -1,6 +1,5 @@
 // Generated from C:/Development/coherence-sql/src/main/resources\SqlGrammar.g4 by ANTLR 4.7
 package pl.mwojciechowski.coherence.sql.antlr;
-
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -8,7 +7,7 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  * by {@link SqlGrammarParser}.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
- *            operations with no return type.
+ * operations with no return type.
  */
 public interface SqlGrammarVisitor<T> extends ParseTreeVisitor<T> {
     /**
@@ -62,15 +61,6 @@ public interface SqlGrammarVisitor<T> extends ParseTreeVisitor<T> {
     T visitPrimitiveExpression(SqlGrammarParser.PrimitiveExpressionContext ctx);
 
     /**
-     * Visit a parse tree produced by the {@code column_refExpression}
-     * labeled alternative in {@link SqlGrammarParser#expression}.
-     *
-     * @param ctx the parse tree
-     * @return the visitor result
-     */
-    T visitColumn_refExpression(SqlGrammarParser.Column_refExpressionContext ctx);
-
-    /**
      * Visit a parse tree produced by the {@code caseExpression}
      * labeled alternative in {@link SqlGrammarParser#expression}.
      *
@@ -87,6 +77,15 @@ public interface SqlGrammarVisitor<T> extends ParseTreeVisitor<T> {
      * @return the visitor result
      */
     T visitFunctionCallExpression(SqlGrammarParser.FunctionCallExpressionContext ctx);
+
+    /**
+     * Visit a parse tree produced by the {@code columnRefExpression}
+     * labeled alternative in {@link SqlGrammarParser#expression}.
+     *
+     * @param ctx the parse tree
+     * @return the visitor result
+     */
+    T visitColumnRefExpression(SqlGrammarParser.ColumnRefExpressionContext ctx);
 
     /**
      * Visit a parse tree produced by the {@code bracketExpression}

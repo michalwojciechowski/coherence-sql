@@ -58,7 +58,7 @@ expression
     | CASE caseExpr=expression switchSection+ (ELSE elseExpr=expression)? END   #caseExpression
     | CASE switchSearchConditionSection+ (ELSE elseExpr=expression)? END      #caseExpression
 
-    | fullColumnName                                         #column_refExpression
+    | fullColumnName                                         #columnRefExpression
     | '(' expression ')'                                       #bracketExpression
     | '(' subquery ')'                                         #subqueryExpression
     | '~' expression                                           #unaryOperatorExpression
@@ -146,7 +146,7 @@ optionClause
     ;
 
 option
-    : FAST number_rows=DECIMAL
+    : FAST numberRows=DECIMAL
     | (HASH | ORDER) GROUP
     | (MERGE | HASH | CONCAT) UNION
     | (LOOP | MERGE | HASH) JOIN
@@ -156,7 +156,7 @@ option
     | KEEP PLAN
     | KEEPFIXED PLAN
     | MAXDOP numberOfProcessors=DECIMAL
-    | MAXRECURSION number_recursion=DECIMAL
+    | MAXRECURSION numberRecursion=DECIMAL
     | OPTIMIZE FOR UNKNOWN
     | PARAMETERIZATION (SIMPLE | FORCED)
     | RECOMPILE

@@ -1,6 +1,5 @@
 // Generated from C:/Development/coherence-sql/src/main/resources\SqlGrammar.g4 by ANTLR 4.7
 package pl.mwojciechowski.coherence.sql.antlr;
-
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -97,22 +96,6 @@ public interface SqlGrammarListener extends ParseTreeListener {
     void exitPrimitiveExpression(SqlGrammarParser.PrimitiveExpressionContext ctx);
 
     /**
-     * Enter a parse tree produced by the {@code column_refExpression}
-     * labeled alternative in {@link SqlGrammarParser#expression}.
-     *
-     * @param ctx the parse tree
-     */
-    void enterColumn_refExpression(SqlGrammarParser.Column_refExpressionContext ctx);
-
-    /**
-     * Exit a parse tree produced by the {@code column_refExpression}
-     * labeled alternative in {@link SqlGrammarParser#expression}.
-     *
-     * @param ctx the parse tree
-     */
-    void exitColumn_refExpression(SqlGrammarParser.Column_refExpressionContext ctx);
-
-    /**
      * Enter a parse tree produced by the {@code caseExpression}
      * labeled alternative in {@link SqlGrammarParser#expression}.
      *
@@ -143,6 +126,22 @@ public interface SqlGrammarListener extends ParseTreeListener {
      * @param ctx the parse tree
      */
     void exitFunctionCallExpression(SqlGrammarParser.FunctionCallExpressionContext ctx);
+
+    /**
+     * Enter a parse tree produced by the {@code columnRefExpression}
+     * labeled alternative in {@link SqlGrammarParser#expression}.
+     *
+     * @param ctx the parse tree
+     */
+    void enterColumnRefExpression(SqlGrammarParser.ColumnRefExpressionContext ctx);
+
+    /**
+     * Exit a parse tree produced by the {@code columnRefExpression}
+     * labeled alternative in {@link SqlGrammarParser#expression}.
+     *
+     * @param ctx the parse tree
+     */
+    void exitColumnRefExpression(SqlGrammarParser.ColumnRefExpressionContext ctx);
 
     /**
      * Enter a parse tree produced by the {@code bracketExpression}
