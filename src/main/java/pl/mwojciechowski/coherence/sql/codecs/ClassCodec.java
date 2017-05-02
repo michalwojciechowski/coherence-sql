@@ -1,4 +1,4 @@
-package pl.mwojciechowski.coherence.sql;
+package pl.mwojciechowski.coherence.sql.codecs;
 
 import com.tangosol.io.pof.PofReader;
 import com.tangosol.io.pof.PofWriter;

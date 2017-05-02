@@ -1,7 +1,6 @@
-package pl.mwojciechowski.coherence.sql;
+package pl.mwojciechowski.coherence.sql.repository;
 
 import com.tangosol.util.Filter;
-import pl.mwojciechowski.coherence.sql.remote.RepositoryFactory;
 
 import java.util.Map;
 import java.util.Set;

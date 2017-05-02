@@ -1,4 +1,4 @@
-package pl.mwojciechowski.coherence.sql;
+package pl.mwojciechowski.coherence.sql.repository;
 
 import com.google.common.reflect.TypeToken;
 import com.tangosol.io.pof.annotation.Portable;
@@ -8,8 +8,8 @@ import com.tangosol.net.NamedCache;
 import com.tangosol.net.cache.TypeAssertion;
 import com.tangosol.util.Filter;
 import org.apache.commons.lang3.Validate;
-import pl.mwojciechowski.coherence.sql.remote.NamedCacheRepositoryFactory;
-import pl.mwojciechowski.coherence.sql.remote.RepositoryFactory;
+import pl.mwojciechowski.coherence.sql.annotations.PofConstructor;
+import pl.mwojciechowski.coherence.sql.codecs.ClassCodec;
 
 import java.util.Map;
 import java.util.Set;

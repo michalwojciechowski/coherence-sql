@@ -1,10 +1,8 @@
-package pl.mwojciechowski.coherence.sql.remote;
+package pl.mwojciechowski.coherence.sql.repository;
 
 import com.tangosol.io.pof.annotation.Portable;
 import com.tangosol.io.pof.annotation.PortableProperty;
 import lombok.AllArgsConstructor;
-import pl.mwojciechowski.coherence.sql.NamedCacheRepository;
-import pl.mwojciechowski.coherence.sql.Repository;
 
 /**
  * @author Michal Wojciechowski

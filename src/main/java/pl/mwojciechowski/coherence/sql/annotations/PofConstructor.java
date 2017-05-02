@@ -1,4 +1,4 @@
-package pl.mwojciechowski.coherence.sql;
+package pl.mwojciechowski.coherence.sql.annotations;
 
 /**
  * @author Michal Wojciechowski

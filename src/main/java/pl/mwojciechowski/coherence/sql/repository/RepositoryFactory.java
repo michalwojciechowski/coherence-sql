@@ -1,7 +1,6 @@
-package pl.mwojciechowski.coherence.sql.remote;
+package pl.mwojciechowski.coherence.sql.repository;
 
 import com.tangosol.util.function.Remote;
-import pl.mwojciechowski.coherence.sql.Repository;
 
 /**
  * @author Michal Wojciechowski
